@@ -1,36 +1,42 @@
-import React, { useState } from "react";
+import React from "react";
 
 export default function About(props) {
-  const [myStyle, setMyStyle] = useState({
-    color: "black",
-    backgroundColor: "white",
+  // const [myStyle, setMyStyle] = useState({
+  //   color: "black",
+  //   backgroundColor: "white",
 
-  });
+  // });
 
-  const [btnText,setBtnText] = useState("Enable Dark Mode")
+  let myStyle = {
+    color: props.mode ==='dark' ? 'white':'#333333',
+    backgroundColor : props.mode === 'dark' ? '#333333':'white',
 
-  const toggleStyle = () => {
-    if (myStyle.color === "black") {
-      setMyStyle({
-        color: "white",
-        backgroundColor: "black",
-        border : "1px solid white "
+  }
 
-      })
-      setBtnText("Enable Light Mode")
-    }
-    else{
-      setMyStyle({
-        color: "black",
-        backgroundColor: "white",
-      });
-      setBtnText("Enable Dark Mode")
+  // const [btnText, setBtnText] = useState("Enable Dark Mode")
 
-    }
-  };
+  // const toggleStyle = () => {
+  //   if (myStyle.color === "black") {
+  //     setMyStyle({
+  //       color: "white",
+  //       backgroundColor: "black",
+  //       border: "1px solid white "
+
+  //     })
+  //     setBtnText("Enable Light Mode")
+  //   }
+  //   else {
+  //     setMyStyle({
+  //       color: "black",
+  //       backgroundColor: "white",
+  //     });
+  //     setBtnText("Enable Dark Mode")
+
+  //   }
+  // };
 
   return (
-    <div className="container" style={myStyle}>
+    <div className="container" style={{color: props.mode ==='dark' ? 'white':'#333333'}}>
       <h1 className="my-3">About Us</h1>
       <div className="accordion" id="accordionExample" style={myStyle}>
         <div className="accordion-item">
@@ -44,7 +50,7 @@ export default function About(props) {
               aria-controls="collapseOne"
               style={myStyle}
             >
-              Accordion Item #1
+              <h4>About Our Website</h4>
             </button>
           </h2>
           <div
@@ -53,14 +59,7 @@ export default function About(props) {
             data-bs-parent="#accordionExample"
           >
             <div className="accordion-body" style={myStyle}>
-              <strong>This is the first item's accordion body.</strong> It is
-              shown by default, until the collapse plugin adds the appropriate
-              classes that we use to style each element. These classes control
-              the overall appearance, as well as the showing and hiding via CSS
-              transitions. You can modify any of this with custom CSS or
-              overriding our default variables. It's also worth noting that just
-              about any HTML can go within the <code>.accordion-body</code>,
-              though the transition does limit overflow.
+              Welcome to our website! We're excited to provide you with a platform that offers a range of tools and features to enhance your online experience.<br />Our goal is to create a space that's both informative and interactive for users like you.
             </div>
           </div>
         </div>
@@ -75,7 +74,7 @@ export default function About(props) {
               aria-controls="collapseTwo"
               style={myStyle}
             >
-              Accordion Item #2
+              <h4>Our Mission</h4>
             </button>
           </h2>
           <div
@@ -84,14 +83,7 @@ export default function About(props) {
             data-bs-parent="#accordionExample"
           >
             <div className="accordion-body" style={myStyle}>
-              <strong>This is the second item's accordion body.</strong> It is
-              hidden by default, until the collapse plugin adds the appropriate
-              classes that we use to style each element. These classes control
-              the overall appearance, as well as the showing and hiding via CSS
-              transitions. You can modify any of this with custom CSS or
-              overriding our default variables. It's also worth noting that just
-              about any HTML can go within the <code>.accordion-body</code>,
-              though the transition does limit overflow.
+              Our mission is to provide a user-friendly environment where you can explore, learn, and engage. We're committed to delivering content that's both informative and enjoyable, helping you make the most out of your online journey.
             </div>
           </div>
         </div>
@@ -106,7 +98,7 @@ export default function About(props) {
               aria-controls="collapseThree"
               style={myStyle}
             >
-              Accordion Item #3
+              <h4>Key Features</h4>
             </button>
           </h2>
           <div
@@ -115,19 +107,20 @@ export default function About(props) {
             data-bs-parent="#accordionExample"
           >
             <div className="accordion-body" style={myStyle}>
-              <strong>This is the third item's accordion body.</strong> It is
-              hidden by default, until the collapse plugin adds the appropriate
-              classes that we use to style each element. These classes control
-              the overall appearance, as well as the showing and hiding via CSS
-              transitions. You can modify any of this with custom CSS or
-              overriding our default variables. It's also worth noting that just
-              about any HTML can go within the <code>.accordion-body</code>,
-              though the transition does limit overflow.
+              <p>
+                Our website offers a variety of features designed to cater to your needs:
+              </p>
+              <ul>
+                <li><strong>Text Conversion:</strong> Use our text tools to convert text to uppercase or lowercase, and remove extra spaces for improved clarity.</li>
+                <li><strong>Word Count:</strong> Our word count tool helps you analyze the length of your text and estimate reading time.</li>
+                <li><strong>Dark Mode:</strong> Customize your viewing experience with our dark mode option for reduced eye strain.</li>
+                <li><strong>More to Come:</strong> We're constantly working on expanding our offerings to provide you with even more valuable tools and content.</li>
+              </ul>
             </div>
           </div>
         </div>
       </div>
-      <div className="container my-3">
+      {/* <div className="container my-3">
         <button
           type="button"
           className="btn btn-primary my-3"
@@ -135,7 +128,53 @@ export default function About(props) {
         >
           {btnText}
         </button>
-      </div>
+      </div> */}
     </div>
   );
 }
+
+
+// import React from "react";
+
+// export default function AboutUs(props) {
+//   return (
+//     <div className="container" style={{ color: props.mode === "dark" ? "white" : "black" }}>
+//       <h1>About Our Website</h1>
+//       <p>
+//         Welcome to our website! We're excited to provide you with a platform that offers a range of tools and features to enhance your online experience.
+//         Our goal is to create a space that's both informative and interactive for users like you.
+//       </p>
+//       <h2>Our Mission</h2>
+//       <p>
+//         Our mission is to provide a user-friendly environment where you can explore, learn, and engage. We're committed to delivering content that's both
+//         informative and enjoyable, helping you make the most out of your online journey.
+//       </p>
+//       <h2>Key Features</h2>
+//       <p>
+//         Our website offers a variety of features designed to cater to your needs:
+//       </p>
+//       <ul>
+//         <li><strong>Text Conversion:</strong> Use our text tools to convert text to uppercase or lowercase, and remove extra spaces for improved clarity.</li>
+//         <li><strong>Word Count:</strong> Our word count tool helps you analyze the length of your text and estimate reading time.</li>
+//         <li><strong>Dark Mode:</strong> Customize your viewing experience with our dark mode option for reduced eye strain.</li>
+//         <li><strong>More to Come:</strong> We're constantly working on expanding our offerings to provide you with even more valuable tools and content.</li>
+//       </ul>
+//       <h2>Join Our Community</h2>
+//       <p>
+//         We're thrilled to have you as a part of our community. Feel free to explore the various sections of our website, utilize the tools, and share your
+//         experiences with us. Your feedback is essential as we continue to improve and evolve.
+//       </p>
+//       <p>
+//         Thank you for choosing our platform for your online needs. We look forward to providing you with a seamless and enriching experience!
+//       </p>
+//     </div>
+//   );
+// }
+
+
+
+
+
+
+
+

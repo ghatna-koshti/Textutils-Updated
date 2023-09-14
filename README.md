@@ -4,7 +4,10 @@ Text Utils is a simple web application built with React that allows users to man
 
 ## Screenshot
 
-![TextUtils](https://github.com/ghatna-koshti/Textutils-Updated/assets/142246764/e1512d03-846d-4210-949c-5357d31949be)
+![image](https://github.com/ghatna-koshti/Textutils-Updated/assets/142246764/f2aa3734-ed84-4180-95ab-45f9ccf320e2)
+![image](https://github.com/ghatna-koshti/Textutils-Updated/assets/142246764/55c6f05d-481c-4eb3-81ef-5031f50b7289)
+
+
 
 
 ## Features

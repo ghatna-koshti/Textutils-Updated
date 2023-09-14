@@ -2,6 +2,8 @@
 
 Text Utils is a simple web application built with React that allows users to manipulate text in various ways, such as converting text to uppercase or lowercase, clearing the input, copying the text, and removing extra spaces. Additionally, the app supports a dark mode and light mode for a personalized experience.
 
+##screenshot
+
 ![TextUtils](https://github.com/ghatna-koshti/Textutils-Updated/assets/142246764/e1512d03-846d-4210-949c-5357d31949be)
 
 
